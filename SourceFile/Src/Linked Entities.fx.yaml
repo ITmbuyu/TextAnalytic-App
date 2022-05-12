@@ -326,6 +326,12 @@
             Y: =500
             ZIndex: =23
 
+    Button2 As button:
+        Text: ="Button"
+        X: =541
+        Y: =1181
+        ZIndex: =29
+
     "'More Info Pop Up_2' As group":
         Height: =5
         Width: =5
