@@ -1,0 +1,197 @@
+"'History Detail' As screen":
+
+    Image2_8 As image:
+        Height: =500
+        Image: =HistoryGallery.Selected.ImageName
+        ImagePosition: =ImagePosition.Fill
+        Width: =768
+        Y: =96
+        ZIndex: =1
+
+    Button3_12 As button:
+        BorderColor: =Self.Color
+        DisabledBorderColor: =Self.Color
+        DisabledColor: =Self.Color
+        DisabledFill: =Self.Color
+        DisplayMode: =DisplayMode.Disabled
+        Height: =643
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Text: =""
+        Width: =710
+        X: =29
+        Y: =527
+        ZIndex: =11
+
+    Navigation_10 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =11
+
+        Label2_10 As label:
+            Fill: =RGBA(127, 178, 57, 1)
+            Height: =104
+            Text: =""
+            Width: =768
+            Y: =1262
+            ZIndex: =2
+
+        HomeImage_10 As image:
+            Height: =89
+            Image: =home
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =260
+            Y: =1268
+            ZIndex: =3
+
+        HomeButton_10 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate('Landing Screen', Fade)
+            Text: =""
+            Tooltip: ="Home"
+            Width: =110
+            X: =253
+            Y: =1260
+            ZIndex: =4
+
+        HistoryImage_10 As image:
+            Height: =89
+            Image: =history
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =437
+            Y: =1269
+            ZIndex: =5
+
+        HistoryButton_10 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(History, Fade)
+            Text: =""
+            Tooltip: ="History"
+            Width: =110
+            X: =430
+            Y: =1261
+            ZIndex: =6
+
+        BackImage_10 As image:
+            Height: =89
+            Image: =back
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =74
+            Y: =1269
+            ZIndex: =7
+
+        BackButton_10 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Back()
+            Text: =""
+            Tooltip: ="Home"
+            Width: =110
+            X: =67
+            Y: =1261
+            ZIndex: =8
+
+        UserImage_10 As image:
+            Height: =89
+            Image: =user
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =605
+            Y: =1269
+            ZIndex: =9
+
+        UserButton_10 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate('Account Page', Fade)
+            Text: =""
+            Tooltip: ="History"
+            Width: =110
+            X: =598
+            Y: =1261
+            ZIndex: =10
+
+    Label1_1 As label:
+        Align: =Center
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(127, 178, 57, 1)
+        FontWeight: =Semibold
+        Height: =96
+        Size: =24
+        Text: =HistoryGallery.Selected.Function
+        Width: =768
+        ZIndex: =12
+
+    TextInput2 As text:
+        Align: =Center
+        Default: =HistoryGallery.Selected.Phrase
+        DisplayMode: =DisplayMode.View
+        FontWeight: =Semibold
+        Height: =164
+        Mode: =TextMode.MultiLine
+        Size: =22
+        Width: =675
+        X: =46
+        Y: =582
+        ZIndex: =13
+
+    TextInput2_1 As text:
+        Align: =Center
+        Default: =HistoryGallery.Selected.Result
+        DisplayMode: =DisplayMode.View
+        FontWeight: =Semibold
+        Height: =408
+        Mode: =TextMode.MultiLine
+        Size: =22
+        Width: =675
+        X: =45
+        Y: =808
+        ZIndex: =14
+
+    Icon2_10 As icon.HorizontalLine:
+        Color: =RGBA(127, 178, 57, 1)
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =5
+        Icon: =Icon.HorizontalLine
+        Width: =578
+        X: =93
+        Y: =768
+        ZIndex: =15
+

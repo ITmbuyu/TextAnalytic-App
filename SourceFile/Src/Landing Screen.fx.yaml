@@ -1,0 +1,365 @@
+"'Landing Screen' As screen":
+    Fill: =RGBA(219, 219, 219, 1)
+
+    Button6 As button:
+        DisabledBorderColor: =RGBA(127,178,57, 1)
+        DisabledColor: =RGBA(127,178,57, 1)
+        DisabledFill: =RGBA(127,178,57, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =112
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Text: =""
+        Width: =768
+        Y: =91
+        ZIndex: =1
+
+    Label9 As label:
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =155
+        Text: =""
+        Width: =768
+        ZIndex: =2
+
+    "ClassifyTextGal As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        Height: =285
+        Items: =ClassifyTextCollection
+        TemplatePadding: =0
+        TemplateSize: =401
+        Transition: =Transition.Pop
+        Width: =768
+        Y: =615
+        ZIndex: =3
+
+        Image8_1 As image:
+            Height: =220
+            Image: =ThisItem.Image
+            ImagePosition: =ImagePosition.Fill
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =30
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Width: =376
+            X: =33
+            Y: =21
+            ZIndex: =4
+
+        HtmlText2_2 As htmlViewer:
+            Height: =220
+            HtmlText: |-
+                ="<div style=""background: linear-gradient(180deg, rgba(0,0,0,0) 69%, rgba(127,178,57,0.8183648459383753)); width:100%;height:" & HtmlText2_2.Height - 1 & "px; border-radius: 30px""></div>"
+            OnSelect: =Select(Parent);Navigate(ThisItem.Page)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Width: =376
+            X: =33
+            Y: =21
+            ZIndex: =5
+
+        Label5_1 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =Semibold
+            Height: =42
+            OnSelect: |-
+                =Select(Parent);UpdateContext({showPopUp:true});UpdateContext({resetSlider:false});UpdateContext({showDropDown:true})
+            PaddingBottom: =0
+            Size: =20
+            Text: =Upper(ThisItem.Name)
+            Width: =326
+            X: =58
+            Y: =188
+            ZIndex: =6
+
+    Label3_1 As label:
+        Align: =Left
+        Font: =Font.'Lato Black'
+        FontWeight: =Bold
+        Height: =68
+        PaddingLeft: =30
+        Size: =36
+        Text: ="Classify Text"
+        Width: =768
+        Y: =555
+        ZIndex: =4
+
+    "ClassifyTextGal_1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        Height: =285
+        Items: =ExtractCollection
+        TemplatePadding: =0
+        TemplateSize: =401
+        Transition: =Transition.Pop
+        Width: =768
+        Y: =976
+        ZIndex: =5
+
+        Image8_2 As image:
+            Height: =220
+            Image: =ThisItem.Image
+            ImagePosition: =ImagePosition.Fill
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =30
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Width: =376
+            X: =25
+            Y: =21
+            ZIndex: =4
+
+        HtmlText2_3 As htmlViewer:
+            Height: =220
+            HtmlText: |-
+                ="<div style=""background: linear-gradient(180deg, rgba(0,0,0,0) 69%, rgba(127,178,57,0.8183648459383753)); width:100%;height:" & HtmlText2_3.Height - 1 & "px; border-radius: 30px""></div>"
+            OnSelect: =Select(Parent);Navigate(ThisItem.Page)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Width: =376
+            X: =25
+            Y: =21
+            ZIndex: =5
+
+        Label5_2 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =Semibold
+            Height: =42
+            OnSelect: |-
+                =Select(Parent);UpdateContext({showPopUp:true});UpdateContext({resetSlider:false});UpdateContext({showDropDown:true})
+            PaddingBottom: =0
+            Size: =20
+            Text: =Upper(ThisItem.Name)
+            Width: =346
+            X: =39
+            Y: =179
+            ZIndex: =6
+
+    Label3_2 As label:
+        Align: =Left
+        Font: =Font.'Lato Black'
+        FontWeight: =Bold
+        Height: =68
+        PaddingLeft: =30
+        Size: =36
+        Text: ="Extract Information"
+        Width: =768
+        Y: =916
+        ZIndex: =6
+
+    "ClassifyTextGal_2 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        Height: =262
+        Items: =TranslateCollection
+        TemplatePadding: =0
+        TemplateSize: =401
+        Transition: =Transition.Pop
+        Width: =768
+        Y: =281
+        ZIndex: =7
+
+        Image8_3 As image:
+            Height: =220
+            Image: =ThisItem.Image
+            ImagePosition: =ImagePosition.Fill
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =30
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Width: =376
+            X: =25
+            Y: =21
+            ZIndex: =4
+
+        HtmlText2_4 As htmlViewer:
+            Height: =220
+            HtmlText: |-
+                ="<div style=""background: linear-gradient(180deg, rgba(0,0,0,0) 69%, rgba(127,178,57,0.8183648459383753)); width:100%;height:" & HtmlText2_4.Height - 1 & "px; border-radius: 30px""></div>"
+            OnSelect: =Select(Parent);Navigate(ThisItem.Page)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Width: =376
+            X: =25
+            Y: =21
+            ZIndex: =5
+
+        Label5_3 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =Semibold
+            Height: =42
+            OnSelect: |-
+                =Select(Parent);UpdateContext({showPopUp:true});UpdateContext({resetSlider:false});UpdateContext({showDropDown:true})
+            PaddingBottom: =0
+            Size: =20
+            Text: =Upper(ThisItem.Name)
+            Width: =326
+            X: =58
+            Y: =188
+            ZIndex: =6
+
+    Label3_3 As label:
+        Align: =Left
+        Font: =Font.'Lato Black'
+        FontWeight: =Bold
+        Height: =68
+        PaddingLeft: =30
+        Size: =36
+        Text: ="Translate Text"
+        Width: =768
+        Y: =221
+        ZIndex: =8
+
+    Label8 As label:
+        Align: =Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =94
+        Size: =22
+        Text: |-
+            ="Welcome 
+            " & User().FullName & "!"
+        Width: =768
+        Y: =91
+        ZIndex: =17
+
+    Image6 As image:
+        Height: =96
+        Image: =logo
+        Width: =400
+        X: =184
+        Y: =13
+        ZIndex: =25
+
+    Navigation_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =35
+
+        Label2_2 As label:
+            Fill: =RGBA(127, 178, 57, 1)
+            Height: =104
+            OnSelect: =Navigate(History, Fade)
+            Text: =""
+            Width: =768
+            Y: =1262
+            ZIndex: =26
+
+        HomeImage_2 As image:
+            Height: =89
+            Image: =home
+            OnSelect: =Navigate(History, Fade)
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =260
+            Y: =1268
+            ZIndex: =27
+
+        HomeButton_2 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate('Landing Screen', Fade)
+            Text: =""
+            Tooltip: ="Home"
+            Width: =110
+            X: =253
+            Y: =1260
+            ZIndex: =28
+
+        HistoryImage_2 As image:
+            Height: =89
+            Image: =history
+            OnSelect: =Navigate(History, Fade)
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =437
+            Y: =1269
+            ZIndex: =29
+
+        HistoryButton_2 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(History, Fade)
+            Text: =""
+            Tooltip: ="History"
+            Width: =110
+            X: =430
+            Y: =1261
+            ZIndex: =30
+
+        BackImage_2 As image:
+            Height: =89
+            Image: =back
+            OnSelect: =Navigate(History, Fade)
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =74
+            Y: =1269
+            ZIndex: =31
+
+        BackButton_2 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Back()
+            Text: =""
+            Tooltip: ="Home"
+            Width: =110
+            X: =67
+            Y: =1261
+            ZIndex: =32
+
+        UserImage_1 As image:
+            Height: =89
+            Image: =user
+            OnSelect: =Navigate(History, Fade)
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =605
+            Y: =1269
+            ZIndex: =33
+
+        UserButton_1 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate('Account Page', Fade)
+            Text: =""
+            Tooltip: ="History"
+            Width: =110
+            X: =598
+            Y: =1261
+            ZIndex: =34
+

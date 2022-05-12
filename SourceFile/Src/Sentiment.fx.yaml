@@ -1,0 +1,374 @@
+Sentiment As screen:
+    Fill: =RGBA(219, 219, 219, 1)
+
+    Image2_1 As image:
+        Height: =500
+        Image: =sentimentDemoLogo
+        ImagePosition: =ImagePosition.Fill
+        Width: =768
+        ZIndex: =1
+
+    Button3_1 As button:
+        BorderColor: =Self.Color
+        DisabledBorderColor: =Self.Color
+        DisabledColor: =Self.Color
+        DisabledFill: =Self.Color
+        DisplayMode: =DisplayMode.Disabled
+        Height: =937
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Text: =""
+        Width: =710
+        X: =28
+        Y: =429
+        ZIndex: =2
+
+    Label3_4 As label:
+        Align: =Left
+        Font: =Font.'Lato Black'
+        FontWeight: =Bold
+        Height: =66
+        Size: =36
+        Text: ="Sentiment"
+        Width: =573
+        X: =95
+        Y: =452
+        ZIndex: =3
+
+    Label4_1 As label:
+        Font: =Font.'Lato Light'
+        FontWeight: =Bold
+        Height: =182
+        Size: =20
+        Text: ="Sentiment analysis helps you find out what people think or feel by mining text for clues about positive or negative sentiment, and can associate them with specific aspects of the text"
+        Width: =484
+        X: =224
+        Y: =527
+        ZIndex: =4
+
+    Image3_1 As image:
+        Image: ='emoticons (1)'
+        X: =104
+        Y: =548
+        ZIndex: =5
+
+    OriginalText_1 As text:
+        BorderColor: =RGBA(127, 178, 57, 1)
+        Default: =""
+        Height: =121
+        HintText: ="Enter text for sentiment analysis"
+        HoverBorderColor: =ColorFade(RGBA(127,178,57, 1), 25%)
+        HoverFill: =White
+        Mode: =TextMode.MultiLine
+        Size: =16
+        Width: =612
+        X: =74
+        Y: =770
+        ZIndex: =6
+
+    "'Sentiment Analysis Results' As label":
+        BorderColor: =RGBA(127, 178, 57, 1)
+        BorderThickness: =2
+        Height: =127
+        OnSelect: =
+        Size: =16
+        Text: |-
+            ="Sentiment Detected: " & varSentiment & "
+            Confidence Score: " & varConfidenceScore
+        Width: =612
+        X: =74
+        Y: =986
+        ZIndex: =7
+
+    Icon2_1 As icon.HorizontalLine:
+        Color: =RGBA(127, 178, 57, 1)
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =5
+        Icon: =Icon.HorizontalLine
+        Width: =578
+        X: =94
+        Y: =732
+        ZIndex: =8
+
+    Button4_2 As button:
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =53
+        HoverFill: =ColorFade(RGBA(127,178,5, 1), -20%)
+        OnSelect: |-
+            =If(
+                IsBlank(OriginalText_1.Text),
+                UpdateContext({showPopUp: true}),
+                Set(
+                varSentiment,
+                SentimentFlow.Run(OriginalText_1.Text).sentiment
+                );
+                Set(
+                varConfidenceScore,
+                SentimentFlow.Run(OriginalText_1.Text).scores
+                );
+                Patch(
+                    HistoryTables,
+                    Defaults(HistoryTables),
+                    {
+                        Email: User().Email,
+                        Phrase: "Original: " & OriginalText_1.Text,
+                        Function: "Sentiment Analysis",
+                        Result: "Sentiment: " & 'Sentiment Analysis Results'.Text,
+                        DateCreated: Today(),
+                        ImageName: sentimentDemoLogo
+                    }
+                )
+            )
+        Size: =16
+        Text: ="Analyse Sentiment"
+        Width: =257
+        X: =251
+        Y: =1160
+        ZIndex: =9
+
+    Navigation_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =15
+
+        Label2_1 As label:
+            Fill: =RGBA(127, 178, 57, 1)
+            Height: =104
+            Text: =""
+            Width: =768
+            Y: =1262
+            ZIndex: =10
+
+        HomeImage_1 As image:
+            Height: =89
+            Image: =home
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =260
+            Y: =1268
+            ZIndex: =11
+
+        HomeButton_1 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate('Landing Screen', Fade)
+            Text: =""
+            Tooltip: ="Home"
+            Width: =110
+            X: =253
+            Y: =1260
+            ZIndex: =12
+
+        HistoryImage_1 As image:
+            Height: =89
+            Image: =history
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =437
+            Y: =1269
+            ZIndex: =13
+
+        HistoryButton_1 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(History, Fade)
+            Text: =""
+            Tooltip: ="History"
+            Width: =110
+            X: =430
+            Y: =1261
+            ZIndex: =14
+
+        BackImage_1 As image:
+            Height: =89
+            Image: =back
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =74
+            Y: =1269
+            ZIndex: =15
+
+        BackButton_1 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Set(varSentiment, "");Set(varConfidenceScore, ""); Reset(OriginalText_1); Back()
+            Text: =""
+            Tooltip: ="Home"
+            Width: =110
+            X: =67
+            Y: =1261
+            ZIndex: =16
+
+        UserImage_2 As image:
+            Height: =89
+            Image: =user
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =605
+            Y: =1269
+            ZIndex: =17
+
+        UserButton_2 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate('Account Page', Fade)
+            Text: =""
+            Tooltip: ="History"
+            Width: =110
+            X: =598
+            Y: =1261
+            ZIndex: =18
+
+    Label3_5 As label:
+        Align: =Left
+        Font: =Font.'Lato Black'
+        FontWeight: =Bold
+        Height: =66
+        Size: =25
+        Text: ="Sentiment Analysis Results"
+        Width: =573
+        X: =65
+        Y: =920
+        ZIndex: =19
+
+    PopUp_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =24
+
+        Rectangle1_1 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =1366
+            Visible: =showPopUp
+            Width: =768
+            ZIndex: =20
+
+        Rectangle2_1 As rectangle:
+            Fill: =RGBA(237, 237, 237, 1)
+            Height: =215
+            Visible: =showPopUp
+            Width: =513
+            X: =125
+            Y: =370
+            ZIndex: =21
+
+        Label5_4 As label:
+            Align: =Center
+            Height: =88
+            Size: =18
+            Text: ="Please enter a message to continue"
+            Visible: =showPopUp
+            Width: =413
+            X: =177
+            Y: =401
+            ZIndex: =22
+
+        Button4_8 As button:
+            Fill: =RGBA(127, 178, 57, 1)
+            Height: =48
+            HoverFill: =ColorFade(RGBA(127,178,5, 1), -20%)
+            OnSelect: |-
+                =UpdateContext({showPopUp:!showPopUp})
+            Size: =16
+            Text: ="Ok"
+            Visible: =showPopUp
+            Width: =169
+            X: =298
+            Y: =500
+            ZIndex: =23
+
+    Icon5 As icon.Information:
+        Height: =38
+        Icon: =Icon.Information
+        OnSelect: |-
+            =UpdateContext({MoreInfoPopup: true})
+        Width: =48
+        X: =590
+        Y: =931
+        ZIndex: =25
+
+    "'More Info Pop Up' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =30
+
+        Rectangle1_7 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =1366
+            Visible: =MoreInfoPopup
+            Width: =768
+            ZIndex: =26
+
+        Rectangle2_7 As rectangle:
+            Fill: =RGBA(237, 237, 237, 1)
+            Height: =265
+            Visible: =MoreInfoPopup
+            Width: =479
+            X: =159
+            Y: =370
+            ZIndex: =27
+
+        Label5_10 As label:
+            Align: =Center
+            Height: =147
+            Size: =18
+            Text: |-
+                ="Confidence Score
+                value = 1 or close to 1 means confident answer
+                value = 0 or close to 0 means uncertain answer"
+            Visible: =MoreInfoPopup
+            Width: =413
+            X: =177
+            Y: =401
+            ZIndex: =28
+
+        Button4_17 As button:
+            Fill: =RGBA(127, 178, 57, 1)
+            Height: =48
+            HoverFill: =ColorFade(RGBA(127,178,5, 1), -20%)
+            OnSelect: |-
+                =UpdateContext({MoreInfoPopup:!MoreInfoPopup})
+            Size: =16
+            Text: ="Ok"
+            Visible: =MoreInfoPopup
+            Width: =169
+            X: =316
+            Y: =574
+            ZIndex: =29
+

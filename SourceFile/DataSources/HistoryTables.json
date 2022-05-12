@@ -1,0 +1,103 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr61b_historytables",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr61b_historytable",
+    "MaxGetRowsCount": 500,
+    "Name": "HistoryTables",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr61b_datecreated": "DateCreated",
+      "cr61b_email": "Email",
+      "cr61b_function": "Function",
+      "cr61b_historytable_AsyncOperations": "System Jobs",
+      "cr61b_historytable_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr61b_historytable_DuplicateBaseRecord": "Duplicate Records (cr61b_historytable_DuplicateBaseRecord)",
+      "cr61b_historytable_DuplicateMatchingRecord": "Duplicate Records (cr61b_historytable_DuplicateMatchingRecord)",
+      "cr61b_historytable_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr61b_historytable_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr61b_historytable_ProcessSession": "Process Sessions",
+      "cr61b_historytable_SyncErrors": "Sync Errors",
+      "cr61b_historytableid": "HistoryTable",
+      "cr61b_id": "Id",
+      "cr61b_imagename": "ImageName",
+      "cr61b_phrase": "Phrase",
+      "cr61b_result": "Result",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "HistoryTables",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "HistoryTables (Views)",
+    "Name": "_cr61b_historytable_views",
+    "RelatedEntityName": "HistoryTables",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "225d3b69-2f64-48e3-b308-76ec8234c912": "Active HistoryTables",
+      "53205c8c-9050-4238-8944-8bce8f9fd940": "HistoryTable Lookup View",
+      "5d2715d3-3457-48b1-ba9f-5805e6ac8ca6": "HistoryTable Advanced Find View",
+      "c8c24e93-4e8f-4c96-8433-9be523e33e96": "Inactive HistoryTables",
+      "e33453b7-ffaf-48e3-90bf-db9dc443647b": "HistoryTable Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (HistoryTables)",
+    "Name": "cr61b_historytable_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "HistoryTables"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "HistoryTables",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (HistoryTables)",
+    "Name": "cr61b_historytable_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "HistoryTables"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "HistoryTables",
+    "Type": "OptionSetInfo"
+  }
+]

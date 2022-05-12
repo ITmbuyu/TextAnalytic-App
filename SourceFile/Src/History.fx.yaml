@@ -1,0 +1,238 @@
+"History As screen.'tabletLayout_HeaderAndGallery_ver3.0'":
+    Fill: =RGBA(219, 219, 219, 1)
+
+    "HistoryGallery As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver4.0'":
+        Height: =1180
+        Items: =Filter(HistoryTables, Email=User().Email)
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =204
+        Width: =Parent.Width
+        Y: =80
+        ZIndex: =1
+
+        Button1 As button:
+            Color: =White
+            DisabledBorderColor: =Self.Color
+            DisabledColor: =Self.Color
+            DisabledFill: =Self.Color
+            DisplayMode: =DisplayMode.Disabled
+            Height: =162
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =40
+            RadiusBottomRight: =40
+            RadiusTopLeft: =40
+            RadiusTopRight: =40
+            Text: =""
+            Width: =656
+            X: =58
+            Y: =19
+            ZIndex: =1
+
+        Image8 As image:
+            Height: =128
+            Image: =ThisItem.ImageName
+            ImagePosition: =ImagePosition.Fill
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =30
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Width: =128
+            X: =80
+            Y: =38
+            ZIndex: =2
+
+        Title3 As label:
+            Height: =38
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =If(Len(ThisItem.Function) >= 25, Concatenate(Left(ThisItem.Function, 25),"..."), ThisItem.Function)
+            VerticalAlign: =VerticalAlign.Top
+            Width: =388
+            X: =230
+            Y: =32
+            ZIndex: =3
+
+        Subtitle2 As label:
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =If(Len(ThisItem.Phrase) >= 30, Concatenate(Left(ThisItem.Phrase, 30),"..."), ThisItem.Phrase)
+            VerticalAlign: =VerticalAlign.Top
+            Width: =388
+            X: =230
+            Y: =68
+            ZIndex: =4
+
+        Body2 As label:
+            Height: =56
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =If(Len(ThisItem.Result) >= 30, Concatenate(Left(ThisItem.Result, 30),"..."), ThisItem.Result)
+            VerticalAlign: =VerticalAlign.Top
+            Width: =388
+            X: =230
+            Y: =110
+            ZIndex: =5
+
+        NextArrow2 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(127, 178, 57, 1)
+            Height: =60
+            Icon: =Icon.Hamburger
+            OnSelect: =Select(Parent); Navigate('History Detail', Fade)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =618
+            Y: =68
+            ZIndex: =6
+
+    Label1 As label:
+        Align: =Center
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(127, 178, 57, 1)
+        FontWeight: =Semibold
+        Height: =80
+        Size: =24
+        Text: ="My History"
+        Width: =768
+        ZIndex: =13
+
+    Navigation_8 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+        Label2_8 As label:
+            Fill: =RGBA(127, 178, 57, 1)
+            Height: =104
+            Text: =""
+            Width: =768
+            Y: =1262
+            ZIndex: =4
+
+        HomeImage_8 As image:
+            Height: =89
+            Image: =home
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =260
+            Y: =1268
+            ZIndex: =5
+
+        HomeButton_8 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate('Landing Screen', Fade)
+            Text: =""
+            Tooltip: ="Home"
+            Width: =110
+            X: =253
+            Y: =1260
+            ZIndex: =6
+
+        HistoryImage_8 As image:
+            Height: =89
+            Image: =history
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =437
+            Y: =1269
+            ZIndex: =7
+
+        HistoryButton_8 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(History, Fade)
+            Text: =""
+            Tooltip: ="History"
+            Width: =110
+            X: =430
+            Y: =1261
+            ZIndex: =8
+
+        BackImage_8 As image:
+            Height: =89
+            Image: =back
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =74
+            Y: =1269
+            ZIndex: =9
+
+        BackButton_8 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Back()
+            Text: =""
+            Tooltip: ="Home"
+            Width: =110
+            X: =67
+            Y: =1261
+            ZIndex: =10
+
+        UserImage_8 As image:
+            Height: =89
+            Image: =user
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =605
+            Y: =1269
+            ZIndex: =11
+
+        UserButton_8 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate('Account Page', Fade)
+            Text: =""
+            Tooltip: ="History"
+            Width: =110
+            X: =598
+            Y: =1261
+            ZIndex: =12
+

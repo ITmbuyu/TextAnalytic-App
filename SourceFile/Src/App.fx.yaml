@@ -1,0 +1,6 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =ClearCollect(ClassifyTextCollection,{Name:"Detect Language",Image:detectLanguageDemoLogo,Page:'Detecting Language'},{Name:"Sentiment",Image:sentimentDemoLogo,Page:Sentiment});ClearCollect(ExtractCollection,{Name:"Personal Inforamtion",Image:piiDemoLogo,Page:PII},{Name:"Key Phrases",Image:keyPhrasesDemoLogo,Page:'Key Phrases'},{Name:"Linked Entities",Image:linkedEntitiesDemoLogo,Page:'Linked Entities'},{Name:"Named Enities",Image:nerDemoLogo,Page:'Named Entites'});ClearCollect(TranslateCollection,{Name:"Translate",Image:customTranslationLogo,Page:Translation})
+    StartScreen: =Home
+

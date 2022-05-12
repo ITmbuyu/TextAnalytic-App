@@ -1,0 +1,38 @@
+Home As screen:
+    BackgroundImage: ='istockphoto-1208592742-612x612'
+    ImagePosition: =ImagePosition.Fill
+
+    Button7 As button:
+        DisabledBorderColor: =White
+        DisabledColor: =White
+        DisabledFill: =White
+        DisplayMode: =DisplayMode.Disabled
+        Height: =115
+        RadiusBottomLeft: =110
+        RadiusBottomRight: =110
+        RadiusTopLeft: =110
+        RadiusTopRight: =110
+        Text: ="Button"
+        Width: =140
+        X: =584
+        Y: =1204
+        ZIndex: =1
+
+    Icon3 As icon.CancelBadge:
+        Color: =RGBA(141, 198, 63, 1)
+        Height: =89
+        Icon: =Icon.ArrowRight
+        OnSelect: =Navigate('Sign In', CoverRight)
+        Width: =81
+        X: =613
+        Y: =1217
+        ZIndex: =2
+
+    Image4 As image:
+        Height: =1015
+        Image: ='TextAnalytic-logos_white'
+        ImagePosition: =ImagePosition.Fill
+        Width: =768
+        Y: =126
+        ZIndex: =3
+

@@ -1,0 +1,206 @@
+"'Sign Up' As screen":
+    BackgroundImage: ='istockphoto-1208592742-612x612'
+    ImagePosition: =ImagePosition.Fill
+
+    Button3_11 As button:
+        BorderColor: =Self.Color
+        Color: =RGBA(168, 236, 151, 1)
+        DisabledBorderColor: =Self.Color
+        DisabledColor: =Self.Color
+        DisabledFill: =Self.Color
+        DisplayMode: =DisplayMode.Disabled
+        Height: =73
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: =""
+        Width: =710
+        X: =29
+        Y: =1293
+        ZIndex: =1
+
+    Button7_2 As button:
+        DisabledBorderColor: =White
+        DisabledColor: =White
+        DisabledFill: =White
+        DisplayMode: =DisplayMode.Disabled
+        Height: =115
+        RadiusBottomLeft: =110
+        RadiusBottomRight: =110
+        RadiusTopLeft: =110
+        RadiusTopRight: =110
+        Text: ="Button"
+        Width: =140
+        X: =584
+        Y: =1204
+        ZIndex: =2
+
+    Icon3_2 As icon.CancelBadge:
+        Color: =RGBA(141, 198, 63, 1)
+        Height: =89
+        Icon: =Icon.ArrowRight
+        OnSelect: =Navigate('Landing Screen', CoverRight)
+        Width: =81
+        X: =613
+        Y: =1217
+        ZIndex: =3
+
+    Image4_2 As image:
+        Height: =404
+        Image: ='TextAnalytic-logos_white'
+        ImagePosition: =ImagePosition.Fill
+        Width: =768
+        ZIndex: =4
+
+    Button3_8 As button:
+        BorderColor: =Self.Color
+        Color: =RGBA(168, 236, 151, 1)
+        DisabledBorderColor: =Self.Color
+        DisabledColor: =Self.Color
+        DisabledFill: =Self.Color
+        DisplayMode: =DisplayMode.Disabled
+        Height: =937
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Text: =""
+        Width: =710
+        X: =29
+        Y: =429
+        ZIndex: =5
+
+    Label3_17 As label:
+        Align: =Align.Center
+        Font: =Font.'Lato Black'
+        FontWeight: =Bold
+        Height: =66
+        Size: =36
+        Text: ="Sign Up"
+        Width: =573
+        X: =95
+        Y: =452
+        ZIndex: =6
+
+    Label4_10 As label:
+        Font: =Font.'Lato Light'
+        FontWeight: =Bold
+        Height: =84
+        Size: =20
+        Text: ="Please create an account to access the app"
+        Width: =484
+        X: =218
+        Y: =547
+        ZIndex: =7
+
+    Image3_8 As image:
+        Image: ='sign-up'
+        X: =104
+        Y: =548
+        ZIndex: =8
+
+    OriginalText_9 As text:
+        BorderColor: =RGBA(127, 178, 57, 1)
+        Default: =""
+        Height: =57
+        HintText: ="Enter Name"
+        HoverBorderColor: =ColorFade(RGBA(127,178,57, 1), 25%)
+        HoverFill: =White
+        Size: =16
+        Width: =612
+        X: =76
+        Y: =775
+        ZIndex: =9
+
+    Icon2_8 As icon.HorizontalLine:
+        Color: =RGBA(127, 178, 57, 1)
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =5
+        Icon: =Icon.HorizontalLine
+        Width: =578
+        X: =94
+        Y: =732
+        ZIndex: =10
+
+    Button4_15 As button:
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =73
+        HoverFill: =ColorFade(RGBA(127,178,5, 1), -20%)
+        OnSelect: =Navigate(Home, Fade)
+        Size: =16
+        Text: ="CREATE ACCOUNT"
+        Width: =257
+        X: =255
+        Y: =1035
+        ZIndex: =11
+
+    Label4_11 As label:
+        Align: =Align.Center
+        Font: =Font.'Lato Light'
+        FontWeight: =Bold
+        Height: =56
+        Size: =25
+        Text: ="Sign up with"
+        Width: =325
+        X: =218
+        Y: =1133
+        ZIndex: =12
+
+    Image1_1 As image:
+        Image: ='google (1)'
+        X: =104
+        Y: =1237
+        ZIndex: =13
+
+    Image5_1 As image:
+        Image: =twitter
+        X: =528
+        Y: =1237
+        ZIndex: =14
+
+    Image7_1 As image:
+        Image: ='facebook (1)'
+        X: =323
+        Y: =1237
+        ZIndex: =15
+
+    Label4_12 As label:
+        Font: =Font.'Lato Light'
+        FontWeight: =Bold
+        Height: =69
+        OnSelect: =Navigate('Sign In', Fade)
+        Size: =20
+        Text: ="Already a member? Login"
+        Width: =349
+        X: =219
+        Y: =648
+        ZIndex: =16
+
+    OriginalText_10 As text:
+        BorderColor: =RGBA(127, 178, 57, 1)
+        Default: =""
+        Height: =57
+        HintText: ="Enter Email"
+        HoverBorderColor: =ColorFade(RGBA(127,178,57, 1), 25%)
+        HoverFill: =White
+        Size: =16
+        Width: =612
+        X: =78
+        Y: =866
+        ZIndex: =17
+
+    OriginalText_11 As text:
+        BorderColor: =RGBA(127, 178, 57, 1)
+        Default: =""
+        Height: =57
+        HintText: ="Enter Password"
+        HoverBorderColor: =ColorFade(RGBA(127,178,57, 1), 25%)
+        HoverFill: =White
+        Mode: =TextMode.Password
+        Size: =16
+        Width: =612
+        X: =77
+        Y: =958
+        ZIndex: =18
+

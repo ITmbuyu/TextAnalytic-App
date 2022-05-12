@@ -1,0 +1,304 @@
+"'Key Phrases' As screen":
+
+    Image2_3 As image:
+        Height: =500
+        Image: =keyPhrasesDemoLogo
+        ImagePosition: =ImagePosition.Fill
+        Width: =768
+        ZIndex: =1
+
+    Button3_3 As button:
+        BorderColor: =Self.Color
+        DisabledBorderColor: =Self.Color
+        DisabledColor: =Self.Color
+        DisabledFill: =Self.Color
+        DisplayMode: =DisplayMode.Disabled
+        Height: =937
+        RadiusBottomLeft: =60
+        RadiusBottomRight: =60
+        RadiusTopLeft: =60
+        RadiusTopRight: =60
+        Text: =""
+        Width: =710
+        X: =28
+        Y: =429
+        ZIndex: =2
+
+    Label3_8 As label:
+        Font: =Font.'Lato Black'
+        FontWeight: =Bold
+        Height: =98
+        Size: =30
+        Text: ="Key Phrases"
+        Width: =710
+        X: =45
+        Y: =429
+        ZIndex: =3
+
+    Label4_3 As label:
+        Font: =Font.'Lato Light'
+        FontWeight: =Bold
+        Height: =182
+        Size: =20
+        Text: ="Key Phrases is used to you need to quickly identify the main points from your text"
+        Width: =484
+        X: =224
+        Y: =507
+        ZIndex: =4
+
+    Image3_3 As image:
+        Image: =conversation
+        X: =104
+        Y: =548
+        ZIndex: =5
+
+    OriginalText_3 As text:
+        BorderColor: =RGBA(127, 178, 57, 1)
+        Default: =""
+        Height: =121
+        HintText: ="Enter Text For Key Phrases Extraction"
+        HoverBorderColor: =ColorFade(RGBA(127,178,57, 1), 25%)
+        HoverFill: =White
+        Mode: =TextMode.MultiLine
+        Size: =16
+        Width: =612
+        X: =74
+        Y: =770
+        ZIndex: =6
+
+    TranslatedText_3 As label:
+        BorderColor: =RGBA(127, 178, 57, 1)
+        BorderThickness: =2
+        Height: =142
+        OnSelect: =
+        Size: =16
+        Text: =varExtractedKeyPhrases
+        Width: =612
+        X: =74
+        Y: =986
+        ZIndex: =7
+
+    Icon2_3 As icon.HorizontalLine:
+        Color: =RGBA(127, 178, 57, 1)
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =5
+        Icon: =Icon.HorizontalLine
+        Width: =578
+        X: =94
+        Y: =732
+        ZIndex: =8
+
+    Button4_4 As button:
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =53
+        HoverFill: =ColorFade(RGBA(127,178,5, 1), -20%)
+        OnSelect: |-
+            =If(
+                IsBlank(OriginalText_3.Text),
+                UpdateContext({showPopUp: true}),
+                Set(
+                varExtractedKeyPhrases,
+                ExtractkeyphrasesFlow.Run(OriginalText_3.Text).keyphrases);
+                Patch(
+                    HistoryTables,
+                    Defaults(HistoryTables),
+                    {
+                        Email: User().Email,
+                        Phrase: "Original: " & OriginalText_3.Text,
+                        Function: "Key Phrases",
+                        Result: "Key Phrases: " & TranslatedText_3.Text,
+                        DateCreated: Today(),
+                        ImageName: keyPhrasesDemoLogo
+                    }
+                )
+            )
+        Size: =16
+        Text: ="Extract Key Phrases"
+        Width: =257
+        X: =251
+        Y: =1160
+        ZIndex: =9
+
+    Label3_9 As label:
+        Align: =Left
+        Font: =Font.'Lato Black'
+        FontWeight: =Bold
+        Height: =66
+        Size: =25
+        Text: ="Key Phrases Extraction Results"
+        Width: =573
+        X: =65
+        Y: =920
+        ZIndex: =10
+
+    Navigation_4 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =19
+
+        Label2_4 As label:
+            Fill: =RGBA(127, 178, 57, 1)
+            Height: =104
+            Text: =""
+            Width: =768
+            Y: =1262
+            ZIndex: =11
+
+        HomeImage_4 As image:
+            Height: =89
+            Image: =home
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =260
+            Y: =1268
+            ZIndex: =12
+
+        HomeButton_4 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate('Landing Screen', Fade)
+            Text: =""
+            Tooltip: ="Home"
+            Width: =110
+            X: =253
+            Y: =1260
+            ZIndex: =13
+
+        HistoryImage_4 As image:
+            Height: =89
+            Image: =history
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =437
+            Y: =1269
+            ZIndex: =14
+
+        HistoryButton_4 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(History, Fade)
+            Text: =""
+            Tooltip: ="History"
+            Width: =110
+            X: =430
+            Y: =1261
+            ZIndex: =15
+
+        BackImage_4 As image:
+            Height: =89
+            Image: =back
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =74
+            Y: =1269
+            ZIndex: =16
+
+        BackButton_4 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Set(varExtractedKeyPhrases, ""); Reset(OriginalText_3); Back()
+            Text: =""
+            Tooltip: ="Home"
+            Width: =110
+            X: =67
+            Y: =1261
+            ZIndex: =17
+
+        UserImage_4 As image:
+            Height: =89
+            Image: =user
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =96
+            X: =605
+            Y: =1269
+            ZIndex: =18
+
+        UserButton_4 As button:
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =105
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate('Account Page', Fade)
+            Text: =""
+            Tooltip: ="History"
+            Width: =110
+            X: =598
+            Y: =1261
+            ZIndex: =19
+
+    PopUp_3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =24
+
+        Rectangle1_3 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.6)
+            Height: =1366
+            Visible: =showPopUp
+            Width: =768
+            ZIndex: =20
+
+        Rectangle2_3 As rectangle:
+            Fill: =RGBA(237, 237, 237, 1)
+            Height: =215
+            Visible: =showPopUp
+            Width: =513
+            X: =125
+            Y: =370
+            ZIndex: =21
+
+        Label5_6 As label:
+            Align: =Center
+            Height: =88
+            Size: =18
+            Text: ="Please enter a message to continue"
+            Visible: =showPopUp
+            Width: =413
+            X: =177
+            Y: =401
+            ZIndex: =22
+
+        Button4_10 As button:
+            Fill: =RGBA(127, 178, 57, 1)
+            Height: =48
+            HoverFill: =ColorFade(RGBA(127,178,5, 1), -20%)
+            OnSelect: |-
+                =UpdateContext({showPopUp:!showPopUp})
+            Size: =16
+            Text: ="Ok"
+            Visible: =showPopUp
+            Width: =169
+            X: =298
+            Y: =500
+            ZIndex: =23
+
